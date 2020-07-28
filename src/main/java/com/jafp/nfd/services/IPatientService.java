@@ -1,4 +1,4 @@
-package com.jafp.nfd.service;
+package com.jafp.nfd.services;
 
 import com.jafp.nfd.entity.Patient;
 

@@ -1,8 +1,8 @@
-package com.jafp.nfd.service.impl;
+package com.jafp.nfd.services.impl;
 
 import com.jafp.nfd.entity.Patient;
 import com.jafp.nfd.repository.PatientRepository;
-import com.jafp.nfd.service.IPatientService;
+import com.jafp.nfd.services.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

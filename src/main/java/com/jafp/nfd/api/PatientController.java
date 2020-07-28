@@ -1,7 +1,7 @@
 package com.jafp.nfd.api;
 
 import com.jafp.nfd.entity.Patient;
-import com.jafp.nfd.service.IPatientService;
+import com.jafp.nfd.services.IPatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
