@@ -21,6 +21,6 @@ public class Patient {
 
     private Date registered;
 
-    @ManyToOne(cascade = CascadeType.DETACH)
+    @ManyToOne
     private Address address;
 }
