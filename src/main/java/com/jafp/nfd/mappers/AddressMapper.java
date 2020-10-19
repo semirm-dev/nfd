@@ -1,6 +1,7 @@
 package com.jafp.nfd.mappers;
 
 import com.jafp.nfd.entity.Address;
+import com.jafp.nfd.models.AddressRequestModel;
 import com.jafp.nfd.models.AddressViewModel;
 import org.mapstruct.Mapper;
 
@@ -8,4 +9,5 @@ import org.mapstruct.Mapper;
 public interface AddressMapper {
     AddressViewModel entityToViewModel(Address address);
     Address viewModelToEntity(AddressViewModel viewModel);
+    Address requestModelToEntity(AddressRequestModel model);
 }

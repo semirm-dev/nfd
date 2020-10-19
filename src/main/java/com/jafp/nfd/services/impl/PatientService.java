@@ -1,7 +1,9 @@
 package com.jafp.nfd.services.impl;
 
+import com.jafp.nfd.entity.Address;
 import com.jafp.nfd.entity.Patient;
 import com.jafp.nfd.mappers.PatientMapper;
+import com.jafp.nfd.models.PatientRequestModel;
 import com.jafp.nfd.models.PatientUpdateModel;
 import com.jafp.nfd.models.PatientViewModel;
 import com.jafp.nfd.repository.PatientRepository;
@@ -35,8 +37,8 @@ public class PatientService implements IPatientService {
     }
 
     @Override
-    public PatientViewModel save(PatientViewModel viewModel) {
-        Patient patient = mapper.viewModelToEntity(viewModel);
+    public PatientViewModel save(PatientRequestModel model) {
+        Patient patient = mapper.requestModelToEntity(model);
 
         patient.setRegistered(new Date(System.currentTimeMillis()));
 

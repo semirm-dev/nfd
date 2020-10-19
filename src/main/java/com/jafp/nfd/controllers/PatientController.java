@@ -1,5 +1,6 @@
 package com.jafp.nfd.controllers;
 
+import com.jafp.nfd.models.PatientRequestModel;
 import com.jafp.nfd.models.PatientUpdateModel;
 import com.jafp.nfd.services.IPatientService;
 import com.jafp.nfd.models.PatientViewModel;
@@ -30,8 +31,8 @@ public class PatientController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public PatientViewModel createPatient(@RequestBody PatientViewModel viewModel) {
-        return patientService.save(viewModel);
+    public PatientViewModel createPatient(@RequestBody PatientRequestModel model) {
+        return patientService.save(model);
     }
 
     @ResponseStatus(HttpStatus.OK)

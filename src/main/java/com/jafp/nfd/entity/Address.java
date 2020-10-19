@@ -18,8 +18,4 @@ public class Address {
     private long id;
 
     private String location;
-
-    @OneToMany
-    @JoinColumn(name = "id")
-    private List<Patient> patients;
 }
