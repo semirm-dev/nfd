@@ -1,13 +1,16 @@
 package com.jafp.nfd.services;
 
-import com.jafp.nfd.entity.Patient;
+import com.jafp.nfd.models.PatientUpdateModel;
+import com.jafp.nfd.models.PatientViewModel;
 
 import java.util.List;
 
 public interface IPatientService {
-    List<Patient> findAll();
+    List<PatientViewModel> findAll();
 
-    Patient save(Patient patient);
+    PatientViewModel save(PatientViewModel viewModel);
 
-    Patient findById(long id);
+    PatientViewModel findById(long id);
+
+    PatientViewModel edit(long id, PatientUpdateModel updateModel);
 }

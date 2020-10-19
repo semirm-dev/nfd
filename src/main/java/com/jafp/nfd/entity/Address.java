@@ -5,22 +5,21 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.List;
 
 @Getter
 @Setter
 @Data
 @Entity
-@Table(name = "patients")
-public class Patient {
+@Table(name = "addresses")
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String name;
+    private String location;
 
-    private Date registered;
-
-    @ManyToOne
-    private Address address;
+    @OneToMany
+    @JoinColumn(name = "id")
+    private List<Patient> patients;
 }
